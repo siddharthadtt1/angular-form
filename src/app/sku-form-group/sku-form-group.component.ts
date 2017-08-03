@@ -30,12 +30,18 @@ export class SkuFormGroupComponent implements OnInit {
 		'sku': ['ABC123', Validators.compose([Validators.required, skuValidator])]
 	});	
 	this.sku = this.myForm.controls['sku'];
+	
+	this.sku.valueChanges.subscribe((value: string) => {
+	  console.log('sku changed ', value);
+	});
+  
+	this.myForm.valueChanges.subscribe((form: any) => {
+	  console.log('myForm changed ', form);
+	});
   }
 
   ngOnInit() {
   }
-  
-  this.sku.valueChanges.subscribe();
   
   onSubmit(form: any): void{
 	console.log('You have entered', form);

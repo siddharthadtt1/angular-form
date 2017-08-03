@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SkuComponentComponent } from './sku-component/sku-component.component';
 import { SkuFormGroupComponent } from './sku-form-group/sku-form-group.component';
+import { SkuNgModelComponent } from './sku-ng-model/sku-ng-model.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkuComponentComponent,
-    SkuFormGroupComponent
+    SkuFormGroupComponent,
+    SkuNgModelComponent
   ],
   imports: [
     BrowserModule,
